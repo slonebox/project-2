@@ -15,6 +15,7 @@ module.exports = function(app) {
       // where: { UserId: db.Users.id },
       include: [db.Users]
     }).then(function(dbPost) {
+      console.log(dbPost);
       res.render("allposts", {
         post: dbPost
       });
