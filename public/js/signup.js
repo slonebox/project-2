@@ -31,7 +31,7 @@ $("#submit").on("click", function(event) {
       .trim()
   };
   //Display the new variable in the console
-//   console.log(newUser);
+  //   console.log(newUser);
 
   //Send the data to the Users API route
   $.post("/api/users", newUser, function(data) {
