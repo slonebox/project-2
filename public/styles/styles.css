@@ -1,3 +1,26 @@
+
+/* NAVBAR */
+
+.jumbotron {
+  background-image: url(/public/images/IMG_0381.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  height: 900px;
+  color: white;
+
+}
+
+#indexcards {
+
+  justify-content: space-evenly;
+  padding-left: 150px;
+}
+
+
+
+
+
 .list-group-item {
   line-height: 2.5;
 }
