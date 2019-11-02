@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Comments = sequelize.define("Comments", {
-    replyContent: DataTypes.TEXT
+    content: DataTypes.TEXT
   });
 
   //Associates replies under a specific account
