@@ -17,9 +17,17 @@
   padding-left: 150px;
 }
 
+#memberlist {
+
+  height: 700px;
+  width: 45%;
+}
 
 
+body {
 
+  background-color: grey;
+}
 
 .list-group-item {
   line-height: 2.5;
