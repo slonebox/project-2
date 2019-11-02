@@ -13,8 +13,8 @@ module.exports = function(app) {
   // Load individual post page
   require("./html-viewpost")(app);
 
-  // Load individual user page
-  require("./html-viewuser")(app);
+  // // Load individual user page
+  // require("./html-viewuser")(app);
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
