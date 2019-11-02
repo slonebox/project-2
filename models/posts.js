@@ -11,10 +11,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-  };
 
-  //Associates various replies to a post
-  Posts.associate = function(models) {
     Posts.hasMany(models.Comments, {
       onDelete: "cascade"
     });
