@@ -29,14 +29,14 @@ module.exports = function(app) {
     //Logs req.body to internal console, but can't seem to access values what is says is [Object: null prototype]
     console.log(req.body);
     var newUser = {
-      email: req.body.email-input,
-      password: req.body.password-input,
-      firstName: req.body.firstName-input,
-      lastName: req.body.lastName-input,
-      website: req.body.website-input,
-      github: req.body.github-input,
-      linkedin: req.body.linkedin-input,
-      imageURL: req.body.imageURL-input
+      email: req.body.email,
+      password: req.body.password,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      website: req.body.website,
+      github: req.body.github,
+      linkedin: req.body.linkedin,
+      imageURL: req.body.imageURL
     };
 
     db.Users.create(newUser).then(function(data) {
