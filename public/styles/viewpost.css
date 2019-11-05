@@ -1,9 +1,11 @@
 body{margin-top:20px;
-    background:#eee;
+    background:rgb(92, 92, 92);
+    background-image: url(/public/images/IMG_0380flip.jpg);
+    background-size: cover;
     }
     
     .white-bg {
-        background-color: #ffffff;
+        background-color: white(27, 27, 27, 0.575);
     }
     .page-heading {
         border-top: 0;
@@ -26,7 +28,7 @@ body{margin-top:20px;
       width: 48px;
     }
     .author-info {
-      color: #676a6c;
+      color: white;
       font-size: 11px;
       margin-top: 5px;
       text-align: center;
@@ -39,7 +41,7 @@ body{margin-top:20px;
     .media-body > .media {
       background: #f9f9f9;
       border-radius: 3px;
-      border: 1px solid #f1f1f1;
+      border: 1px solid #white;
     }
     .forum-post-container .media-body .photos {
       margin: 10px 0;
@@ -62,7 +64,7 @@ body{margin-top:20px;
     .forum-item {
       margin: 10px 0;
       padding: 10px 0 20px;
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid white;
     }
     .views-number {
       font-size: 24px;
@@ -74,10 +76,13 @@ body{margin-top:20px;
       padding: 30px !important;
     }
     .forum-item small {
-      color: #999;
+      color: #white
+    ;
     }
     .forum-item .forum-sub-title {
-      color: #999;
+      color: white;
+      font-family: 'Krub', sans-serif;
+      font-size:18px;
       margin-left: 50px;
     }
     .forum-title {
@@ -87,7 +92,7 @@ body{margin-top:20px;
       text-align: center;
     }
     .forum-desc {
-      color: #999;
+      color: white;
     }
     .forum-icon {
       float: left;
@@ -96,9 +101,10 @@ body{margin-top:20px;
       text-align: center;
     }
     a.forum-item-title {
-      color: inherit;
+      color: white;
       display: block;
-      font-size: 18px;
+      font-family: 'Michroma', sans-serif;
+      font-size: 25px;
       font-weight: 600;
     }
     a.forum-item-title:hover {
@@ -107,7 +113,7 @@ body{margin-top:20px;
     .forum-icon .fa {
       font-size: 30px;
       margin-top: 8px;
-      color: #9b9b9b;
+      color: white;
     }
     .forum-item.active .fa {
       color: #1ab394;
