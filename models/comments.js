@@ -10,16 +10,14 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-  };
-
-  //Associates replies under a specific post
-  Comments.associate = function(models) {
     Comments.belongsTo(models.Posts, {
       foreignKey: {
         allowNull: false
       }
     });
   };
+
+  //Associates replies under a specific post
 
   return Comments;
 };

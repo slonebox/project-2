@@ -25,10 +25,21 @@
 
 
 body {
-
   background-color: grey;
 }
 
 .list-group-item {
   line-height: 2.5;
 }
+
+#write-comment{
+  background-color: #ffffff;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#comment-input{
+  height: 150px;
+}
+

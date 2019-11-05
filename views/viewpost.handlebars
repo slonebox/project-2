@@ -1,64 +1,54 @@
 <div class="container">
-    <ul id="post-list" class="list-group">
-        {{!-- {{#each post}} --}}
-        <li data-id="{{post.id}}" class="list-group-item">
-        <h4>{{post.title}}</h4>
-        <p>{{post.content}}</p>
-        <p>{{post.Users.firstName}}</p>
-        {{!-- <a href="post/{{this.id}}">{{this.text}}</a> --}}
-        </li>
-        {{!-- {{/each}} --}}
-    </ul>
+    <div class="row" style="height: 140px"></div>
+    <div class="row">
+        <a href="/allposts">← Go Back to All Posts</a>
+        <ul id="view-single-post" class="list-group">
+            <li data-id="{{post.id}}" class="list-group-item">
+            <h4>{{post.title}}</h4> 
+            <p>Posted by: {{post.User.firstName}} {{post.User.lastName}}</p>
+            <p>{{post.content}}</p>
+            </li>
+            <a href="#write-comment">Comment</a>
+        </ul>
+    </div>
+    <div class="row">
+        <ul id="comment-list">
+            {{#each comment}}
+            <li class="list-group-item"> 
+                <p>{{this.content}}</p>
+                <p>From {{this.User.firstName}} {{this.User.lastName}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    
 
-    <div class="container">
-    <h1 class="text-center">Sign Up</h1>
     <br>
-    <form>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="email-input">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="jvotto@yahoo.com" required>
+    <form id="write-comment">
+        <div class="row">
+        <div class="form-group col-lg-6 mx-auto pt-2">
+            <label for="imageURL-input">Comment</label>
+            <input type="input" class="form-control" id="comment-input" placeholder="Write your comment here." required>
         </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="password-input">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password" required>
         </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="firstName-input">First Name</label>
-            <input type="input" class="form-control" id="firstName-input" placeholder="Joseph" required>
+        <div class="row">
+        <div class="form-group col-lg-3 mx-auto">
+            <label for="category">Select User:</label>
+            <select class="custom-select" id="user">
+                {{#each user}}
+                <option class="user" data-id="{{this.id}}">{{this.firstName}} {{this.lastName}}</option>
+                {{/each}}
+            </select>
         </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="lastName-input">Last Name</label>
-            <input type="input" class="form-control" id="lastName-input" placeholder="Votto" required>
-        </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="website-input">Website</label>
-            <input type="input" class="form-control" id="website-input" placeholder="www.yourwebsite.com" required>
-        </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="github-input">GitHub</label>
-            <input type="input" class="form-control" id="github-input" placeholder="www.github.com/your-profile" required>
-        </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="linkedin-input">LinkedIn</label>
-            <input type="input" class="form-control" id="linkedin-input" placeholder="www.linkedin.com/your-profile" required>
-        </div>
-        <div class="form-group col-lg-6 mx-auto">
-            <label for="imageURL-input">Image</label>
-            <input type="input" class="form-control" id="imageURL-input" placeholder="Link to a picture of yourself" required>
         </div>
         <br>
         <div class="col-lg-6 mx-auto">
-            <button type="submit" class="btn btn-primary col-12" id="submit">Submit</button>
+            <button type="submit" class="btn btn-primary col-12" id="submit" data-id="{{post.id}}">Submit</button>
         </div>
         <br>
     </form>
-</div>
-
-
-
-    <a href="/allposts">See All Posts</a>
 
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/writecomment.js"></script>
+<script src="../js/writecomment.js"></script>
