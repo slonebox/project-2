@@ -13,6 +13,9 @@ module.exports = function(app) {
   // Load individual post page
   require("./html-viewpost")(app);
 
+  //Load create post page
+  require("./html-createpost")(app);
+
   // // Load individual user page
   // require("./html-viewuser")(app);
 
