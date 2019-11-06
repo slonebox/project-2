@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <!-- google font links -->
+ 
+  <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+
+  <title>User post</title>
+</head>
+
+<body>
+<!-- NAVBAR -->
+    <container class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #34383b; height: 119px;">
+            <a class="navbar-brand" href="#" style="font-size: 32px; margin-left: 45px; width: 351px; padding-left: 45px; border: 2px solid #ffffff; border-top-left-radius: 60px; border-top-right-radius: -228px; border-bottom-right-radius: 58px; background-color: rgba(255, 218, 0, 0.23); box-shadow: 0px 8px 23px 1px #000000; color: #dedede; background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.77) 0.632911%, rgba(0, 0, 0, 0.56) 18.3544%, rgba(204, 0, 0, 0.12) 66%, rgba(250, 76, 76, 0.52) 100%);font-family: 'Michroma', sans-serif;
+            font-size:35px; text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+            text-align: center; height: 64px;">BOOTique</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-left: 500px; margin-left: 29px; margin-top: 42px;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="font-size: 25px;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-size: 25px;">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-size: 25px;">Critique</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-size: 25px;">Job search</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </container>
+
+    <div class="jumbotron" id=""style="background-image: url(/public/images/vscodescreen.png);
+    background-color:rgba(37, 37, 37, 0.329);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 1250px;
+    color: white;">
+      <div style="background-color:rgba(211, 206, 206, 0.657); height:1200px; border: 5px solid rgba(126, 126, 126, 0.774);margin-top:60px;padding:20px;">
+           
+          <container>
+              <row style="display: flex; flex-direction: row;">
+                  <!-- first column with pic and name -->
+                  <div class="col-4">
+                        <div class="card" style="height:1100px; color:black;border: 5px solid rgba(0, 0, 0, 0.678);">
+                                <img style="border: 5px solid rgba(0, 0, 0, 0.678);" src="/public/images/ronerlih.jpg" class="card-img-top" alt="user image">
+                                <div class="card-body">
+                                  <p class="card-text" style="font-family: 'Hind', sans-serif; font-size:60px; text-align:center;
+                                  ">Ron Erlih</p>
+
+                                  <!-- begining of links -->
+                                  <dl style="font-family: 'Hind', sans-serif; font-size:25px;text-align:center;">
+                                        <!-- WEBSITE -->
+                                            <dt style="color:black;">WEBSITE</dt>
+                                            <dd id="website-output" style="margin-bottom: 20px;"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
+                                            <!-- GITHUB -->
+                                            <dt style="color:black;">GITHUB</dt>
+                                            <dd id="github-output" style="margin-bottom: 20px;"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
+                                            <!-- LINKEDIN -->
+                                            <dt style="color:black;">LINKEDIN</dt>
+                                            <dd id="Linkedin-output"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
+                                          </dl>
+                                 
+                                </div>
+                              </div>
+                    
+                  </div>
+
+                  <!-- Second column with info -->
+                  <div class="col-8" style="background-color:rgba(255, 255, 255, 0.822);border: 5px solid rgba(0, 0, 0, 0.678);padding-left: 20px; padding-top: 40px;">
+                        
+
+                    <!-- Comment format and layout -->
+                        <div class="container" style="color:black;">
+                                <div class="row">
+                                    <h2 style="font-size: 40px;">Comments |2| 
+                                        <!-- Button for a new comment -->
+                                        <!-- Needs a href to function -->
+                                        <div class="pull-right"><a href="#" id="addacomment" class="btn btn-primary">Add a coment</a> </div></h2>
+                                </div>
+                                <div class="row" id="addcomment" style="display: none;">
+                                    <form>
+                                        <textarea class="form-control" placeholder="Comment content..."></textarea><br/>
+                                        <button class="btn btn-primary">Send</button>
+                                    </form>
+                                </div>
+                                <hr>
+                                <div class="row comment">
+                                    <div class="head">
+                                        <small><strong class='user' style="font-size: 30px;">Diablo25</strong> 30.10.2017 12:13</small>
+                                    </div>    
+                                    <p style="font-size: 20px;">Lo rem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lorem elementum, accumsan magna sed, faucibus mauris. Nulla pellentesque ante nibh, ac hendrerit ante fermentum sed. Nunc in libero dictum, porta nibh pellentesque, ultrices dolor. Curabitur nunc ipsum, blandit vel aliquam id, aliquam vel velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sit amet mi dignissim, pretium justo non, lacinia libero. Nulla facilisi. Donec id sem velit. </p>
+                                </div>
+                                <!-- second commeng -->
+                                <div class="row comment">
+                                <div class="head">
+                                        <small><strong class='user' style="font-size: 30px;">Diablo25</strong> 30.10.2017 12:13</small>
+                                    </div>    
+                                    <p style="font-size: 20px;">Lo rem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lorem elementum, accumsan magna sed, faucibus mauris. Nulla pellentesque ante nibh, ac hendrerit ante fermentum sed. Nunc in libero dictum, porta nibh pellentesque, ultrices dolor. Curabitur nunc ipsum, blandit vel aliquam id, aliquam vel velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sit amet mi dignissim, pretium justo non, lacinia libero. Nulla facilisi. Donec id sem velit. </p>
+                                </div>
+                                
+                                
+                                
+                                <hr>
+                            </div>
+                    
+                    </div>
+                    
+              </row>
+          </container> 
+           
+           
+            </div>
+          </div>
+
+         
+
+<!-- footer section -->
+<container class="container-fluid" style="position:absolute;background-color: #34383b;height: 200px;color:rgb(177, 176, 176);font-size:10px;margin-top: 30px;">
+<row>
+  <h1  style="font-size:25px;text-align: center;">BOOTique.com was created by:</h1>
+  <h1 style="font-size:25px;text-align: center;">William Mooney Sloneker, Deyanira Genao, Kristofer Gagedeen and Daniel Mayer</h1>
+</row>
+
+
+
+
+</container>
+<!-- Script to populate new comment when button is pushed -->
+<script>
+$(document).on('click', '#addacomment', function(){
+    $('#addcomment').toggle();
+});</script>
+
+
+
+
+
+<!-- bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
