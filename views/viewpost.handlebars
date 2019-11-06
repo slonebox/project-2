@@ -1,53 +1,114 @@
-<div class="container">
-    <div class="row" style="height: 140px"></div>
-    <div class="row">
-        <a href="/allposts">← Go Back to All Posts</a>
-        <ul id="view-single-post" class="list-group">
-            <li data-id="{{post.id}}" class="list-group-item">
-            <h4>{{post.title}}</h4> 
-            <p>Posted by: {{post.User.firstName}} {{post.User.lastName}}</p>
-            <p>{{post.content}}</p>
-            </li>
-            <a href="#write-comment">Comment</a>
-        </ul>
-    </div>
-    <div class="row">
-        <ul id="comment-list">
-            {{#each comment}}
-            <li class="list-group-item"> 
-                <p>{{this.content}}</p>
-                <p>From {{this.User.firstName}} {{this.User.lastName}}</p>
-            </li>
-            {{/each}}
-        </ul>
-    </div>
-    
+<div class="jumbotron" id=""style="background-image: url(/public/images/vscodescreen.png);
+    background-color:rgba(37, 37, 37, 0.329);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 1250px;
+    color: white;">
+    <div style="background-color:rgba(211, 206, 206, 0.657); height:1200px; border: 5px solid rgba(126, 126, 126, 0.774);margin-top:60px;padding:20px;">
+        <container>
+              <row style="display: flex; flex-direction: row;">
+                  <!-- first column with pic and name -->
+                  <div class="col-4">
+                        <div class="card" style="height:1100px; color:black;border: 5px solid rgba(0, 0, 0, 0.678);">
+                                <img style="border: 5px solid rgba(0, 0, 0, 0.678);" src="/public/images/ronerlih.jpg" class="card-img-top" alt="user image">
+                                <div class="card-body">
+                                  <p class="card-text" style="font-family: 'Hind', sans-serif; font-size:60px; text-align:center;
+                                  ">Ron Erlih</p>
 
-    <br>
-    <form id="write-comment">
-        <div class="row">
-        <div class="form-group col-lg-6 mx-auto pt-2">
-            <label for="imageURL-input">Comment</label>
-            <input type="input" class="form-control" id="comment-input" placeholder="Write your comment here." required>
-        </div>
-        </div>
-        <div class="row">
-        <div class="form-group col-lg-3 mx-auto">
-            <label for="category">Select User:</label>
-            <select class="custom-select" id="user">
-                {{#each user}}
-                <option class="user" data-id="{{this.id}}">{{this.firstName}} {{this.lastName}}</option>
-                {{/each}}
-            </select>
-        </div>
-        </div>
-        <br>
-        <div class="col-lg-6 mx-auto">
-            <button type="submit" class="btn btn-primary col-12" id="submit" data-id="{{post.id}}">Submit</button>
-        </div>
-        <br>
-    </form>
+                                  <!-- begining of links -->
+                                  <dl style="font-family: 'Hind', sans-serif; font-size:25px;text-align:center;">
+                                        <!-- WEBSITE -->
+                                            <dt style="color:black;">WEBSITE</dt>
+                                            <dd id="website-output" style="margin-bottom: 20px;"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
+                                            <!-- GITHUB -->
+                                            <dt style="color:black;">GITHUB</dt>
+                                            <dd id="github-output" style="margin-bottom: 20px;"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
+                                            <!-- LINKEDIN -->
+                                            <dt style="color:black;">LINKEDIN</dt>
+                                            <dd id="Linkedin-output"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
+                                          </dl>
+                                 
+                                </div>
+                              </div>
+                    
+                  </div>
 
+                  <!-- Second column with info -->
+                  <div class="col-8" style="background-color:rgba(255, 255, 255, 0.822);border: 5px solid rgba(0, 0, 0, 0.678);padding-left: 20px; padding-top: 40px;">
+                        
+
+                    <!-- Comment format and layout -->
+            <div class="container" style="color:black;">
+                <div class="row">
+                    <a href="/allposts">← Go Back to All Posts</a>
+                        <br>
+                    
+                        <!-- Button for a new comment -->
+                        <!-- Needs a href to function -->
+                        <div class="row">
+                            <h2 style="font-size: 40px;">{{post.title}}</h2>
+                            <br>
+                            {{!-- <div id="view-single-post"> --}}
+                                {{!-- <li data-id="{{post.id}}" class="list-group-item"> --}}
+                                <p>Posted by: {{post.User.firstName}} {{post.User.lastName}}</p>
+                                <br>
+                                <p>{{post.content}}</p>
+                                {{!-- </li> --}}
+                            {{!-- </div> --}}
+                        </div>
+                        <div class="pull-right"><a href="#write-comment" id="addacomment" class="btn btn-primary">Add a comment</a> </div></h2>
+                </div>
+                <div class="row">
+                    <ul id="comment-list">
+                        {{#each comment}}
+                        <li class="list-group-item"> 
+                            <p>{{this.content}}</p>
+                            <p>From {{this.User.firstName}} {{this.User.lastName}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <hr>
+
+
+                <br>
+                <form id="write-comment">
+                    <div class="row">
+                    <div class="form-group col-lg-6 mx-auto pt-2">
+                        <label for="imageURL-input">Comment</label>
+                        <input type="input" class="form-control" id="comment-input" placeholder="Write your comment here." required>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group col-lg-3 mx-auto">
+                        <label for="category">Select User:</label>
+                        <select class="custom-select" id="user">
+                            {{#each user}}
+                            <option class="user" data-id="{{this.id}}">{{this.firstName}} {{this.lastName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="col-lg-6 mx-auto">
+                        <button type="submit" class="btn btn-primary col-12" id="submit" data-id="{{post.id}}">Submit</button>
+                    </div>
+                    <br>
+                </form>
+                
+                    
+                    
+                    
+                <hr>
+                </div>
+        
+            </div>
+                    
+            </row>
+        </container> 
+    </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
