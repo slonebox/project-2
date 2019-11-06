@@ -27,31 +27,14 @@
 
 
 body {
-<<<<<<< HEAD
-  background-color: grey;
-=======
 
   background-color: rgb(27, 27, 27);
->>>>>>> master
 }
 
 .list-group-item {
   line-height: 2.5;
 }
 
-<<<<<<< HEAD
-#write-comment{
-  background-color: #ffffff;
-  width: 60%;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-#comment-input{
-  height: 150px;
-}
-
-=======
 /* COMMENT SECTION */
 .card-inner{
   margin-left: 4rem;
@@ -88,4 +71,3 @@ hr{
 .user{
   margin-right: 10px;
 }
->>>>>>> master
