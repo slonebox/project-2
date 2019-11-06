@@ -1,4 +1,5 @@
 var db = require("../models");
+// var sequelize = require("../models/index.js");
 
 module.exports = function(app) {
   //Load all posts page
@@ -13,7 +14,8 @@ module.exports = function(app) {
           where: {
             PostId: postId
           },
-          include: [db.Users]
+          include: [db.Users],
+          order: db.sequelize.col("createdAt")
         }).then(function(dbComment) {
           res.render("viewpost", {
             user: dbUser,
