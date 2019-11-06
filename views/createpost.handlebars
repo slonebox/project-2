@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="text-center">Create Post</h1>
+    <br>
+    <form>
+        <div class="form-group col-lg-6 mx-auto">
+            <label for="title-input">Title</label>
+            <input type="input" class="form-control" id="title-input" placeholder="Post Title" required>
+        </div>
+        <div class="form-group col-lg-6 mx-auto">
+            <label for="content-input">Content</label>
+            <textarea rows="5" class="form-control" id="content-input" placeholder="What do you want say?" required></textarea>
+        </div>
+        <div class="form-group col-lg-6 mx-auto">
+            <label for="user-select">Author</label>
+            <select type="input" class="form-control" id="user-select"required>
+                {{#each user}}
+                <option data-id="{{this.id}}" class="list-group-item">
+                    {{this.firstName}} {{this.lastName}}
+                </option>
+                {{/each}}
+            </select>
+        </div>
+        <br>
+        <div class="col-lg-6 mx-auto">
+            <button type="submit" class="btn btn-primary col-12" id="submit">Submit</button>
+        </div>
+        <br>
+    </form>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/createpost.js"></script>

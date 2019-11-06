@@ -44,6 +44,20 @@ module.exports = function(app) {
     });
   });
 
+  //create new post
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    var newPost = {
+      title: req.body.title,
+      content: req.body.content,
+      UserId: req.body.userID
+    };
+
+    db.Posts.create(newPost).then(function(data) {
+      res.json(data);
+    });
+  });
+
   app.get("/api/comments", function(req, res) {
     db.Comments.findAll({}).then(function(data) {
       res.json(data);
@@ -52,4 +66,7 @@ module.exports = function(app) {
 
   // Post a new comment
   require("./api-postcomment")(app);
+
+  //Post a new post
+  require("./html-createpost")(app);
 };
