@@ -19,7 +19,7 @@ $(function() {
     $.ajax("/api/comments", {
       type: "POST",
       data: newComment
-    }).then(function() {
+    }).then(function(data) {
       if (data) {
         console.log("new comment added.");
       } else {
