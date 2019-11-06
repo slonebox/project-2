@@ -43,4 +43,13 @@ module.exports = function(app) {
       res.json(data);
     });
   });
+
+  app.get("/api/comments", function(req, res) {
+    db.Comments.findAll({}).then(function(data) {
+      res.json(data);
+    });
+  });
+
+  // Post a new comment
+  require("./api-postcomment")(app);
 };
