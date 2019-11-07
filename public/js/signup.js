@@ -1,3 +1,9 @@
+// Get the modal
+var modal = $("myModal");
+
+// Get the <span> element that closes the modal
+var span = $("close")[0];
+
 //Function that runs on click on submission
 $("#submit").on("click", function(event) {
   //Prevent submission of default values or empty form
@@ -30,8 +36,9 @@ $("#submit").on("click", function(event) {
       .val()
       .trim()
   };
-  //Display the new variable in the console
-//   console.log(newUser);
+
+  //Display the Modal
+  $("#the-modal").show();
 
   //Send the data to the Users API route
   $.post("/api/users", newUser, function(data) {
@@ -42,3 +49,14 @@ $("#submit").on("click", function(event) {
     }
   });
 });
+
+//On-click functions to exit modal
+$(".close").on("click", function (event){
+  $("#the-modal").hide();
+});
+
+window.onclick = function(event){
+  if (event.target == "#the-modal"){
+      $("#the-modal").hide();
+  };
+};
