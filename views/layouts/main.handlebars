@@ -5,49 +5,36 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  {{!-- google font links --}}
-   <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
   <title>BOOTique</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #34383b; height: 119px;">
-            <a class="navbar-brand" href="#" style="font-size: 32px; margin-left: 45px; width: 351px; padding-left: 45px; border: 2px solid #ffffff; border-top-left-radius: 60px; border-top-right-radius: -228px; border-bottom-right-radius: 58px; background-color: rgba(255, 218, 0, 0.23); box-shadow: 0px 8px 23px 1px #000000; color: #dedede; background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.77) 0.632911%, rgba(0, 0, 0, 0.56) 18.3544%, rgba(204, 0, 0, 0.12) 66%, rgba(250, 76, 76, 0.52) 100%);font-family: 'Michroma', sans-serif;
-            font-size:35px; text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-            text-align: center; height: 64px;">BOOTique</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-left: 500px; margin-left: 29px; margin-top: 42px;">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" style="font-size: 25px;">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-size: 25px;">Post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-size: 25px;">Critique</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="views/signup.handlebars" style="font-size: 25px;">Sign up</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-size: 25px;">Job search</a>
-                    </li> -->
-                </ul>
-            </div>
-        </nav>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #34383b; height: 119px;">
+    <a class="navbar-brand" href="#" style="font-size: 32px; margin-left: 3px; width: 351px; padding-left: 53px; border: 2px solid #ffffff; border-top-left-radius: 60px; border-top-right-radius: -228px; border-bottom-right-radius: 58px; background-color: rgba(255, 218, 0, 0.23); box-shadow: 0px 8px 23px 1px #000000; color: #dedede; background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.77) 0.632911%, rgba(0, 0, 0, 0.56) 18.3544%, rgba(204, 0, 0, 0.12) 66%, rgba(250, 76, 76, 0.52) 100%); font-family: Gruppo; letter-spacing: 13px; height: 64px;">BOOTique</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" style="padding-left: 252px; margin-left: 29px; margin-top: 42px;">
+        <ul class="navbar-nav float-right">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" style="font-size: 17px;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="font-size: 17px;">Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/allposts" style="font-size: 17px;">Critique</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/views/signup.handlebars" style="font-size: 17px;">Sign up</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 
   {{{body}}}
 
-
-<!-- footer section -->
+  <!-- footer section -->
 <container class="container-fluid" style="background-color: #34383b;height: 200px;color:rgb(177, 176, 176);font-size:10px;">
 <row>
   <h1  style="font-size:25px;text-align: center;">BOOTique.com was created by:</h1>
@@ -59,10 +46,9 @@
 
 </container>
 
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 </body>
 
 </html>
