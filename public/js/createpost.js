@@ -19,6 +19,9 @@ $("#submit").on("click", function(event) {
   // Display the new variable in the console
   console.log(newPost);
 
+  //Display the Modal
+  $("#the-modal").show();
+
   //Send the data to the posts API route
   $.post("/api/posts", newPost, function(data) {
     if (data) {
@@ -28,3 +31,14 @@ $("#submit").on("click", function(event) {
     }
   });
 });
+
+//On-click functions to exit modal
+$(".close").on("click", function(event) {
+  $("#the-modal").hide();
+});
+
+window.onclick = function(event) {
+  if (event.target == "#the-modal") {
+    $("#the-modal").hide();
+  }
+};
