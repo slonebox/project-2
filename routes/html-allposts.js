@@ -3,17 +3,9 @@ var db = require("../models");
 module.exports = function(app) {
   //Load all posts page
   app.get("/allposts", function(req, res) {
-    // var query = {
-    //   UserId: db.Users.id
-    // };
-    // query.UserId = db.Users.id;
-
-    // db.Users.findOne({
-    //   where: {}
-    // })
     db.Posts.findAll({
-      // where: { UserId: db.Users.id },
-      include: [db.Users]
+      include: [db.Users],
+      order: db.sequelize.col("createdAt", "DESC")
     }).then(function(dbPost) {
       console.log(dbPost);
       res.render("allposts", {

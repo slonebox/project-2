@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "P@ll0tt@",
+    "password": "AnotherPassword",
     "database": "bootiqueDB",
     "host": "localhost",
     "dialect": "mysql"

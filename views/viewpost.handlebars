@@ -12,23 +12,23 @@
                   <!-- first column with pic and name -->
                   <div class="col-4">
                         <div class="card" style="height:1100px; color:black;border: 5px solid rgba(0, 0, 0, 0.678);">
-                                <img style="border: 5px solid rgba(0, 0, 0, 0.678);" src="/public/images/ronerlih.jpg" class="card-img-top" alt="user image">
+                                <img style="height: 400px; width: 400px; border: 5px solid rgba(0, 0, 0, 0.678);" src="{{post.User.imageURL}}" class="card-img-top" alt="user image">
                                 <div class="card-body">
                                   <p class="card-text" style="font-family: 'Hind', sans-serif; font-size:60px; text-align:center;
-                                  ">Ron Erlih</p>
+                                  ">{{post.User.firstName}} {{post.User.lastName}}</p>
 
                                   <!-- begining of links -->
                                   <dl style="font-family: 'Hind', sans-serif; font-size:25px;text-align:center;">
                                         <!-- WEBSITE -->
-                                            <dt style="color:black;">WEBSITE</dt>
-                                            <dd id="website-output" style="margin-bottom: 20px;"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
-                                            <!-- GITHUB -->
-                                            <dt style="color:black;">GITHUB</dt>
-                                            <dd id="github-output" style="margin-bottom: 20px;"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
-                                            <!-- LINKEDIN -->
-                                            <dt style="color:black;">LINKEDIN</dt>
-                                            <dd id="Linkedin-output"><a href="url">https://danmayer218.github.io/Portfolio-homework/</a></dd>
-                                          </dl>
+                                        <dt style="color:black;">WEBSITE</dt>
+                                        <dd id="website-output" style="margin-bottom: 20px;"><a href="{{post.User.website}}">{{post.User.website}}</a></dd>
+                                        <!-- GITHUB -->
+                                        <dt style="color:black;">GITHUB</dt>
+                                        <dd id="github-output" style="margin-bottom: 20px;"><a href="{{post.User.github}}">{{post.User.github}}</a></dd>
+                                        <!-- LINKEDIN -->
+                                        <dt style="color:black;">LINKEDIN</dt>
+                                        <dd id="Linkedin-output"><a href="{{post.User.linkedin}}">{{post.User.linkedin}}</a></dd>
+                                    </dl>
                                  
                                 </div>
                               </div>
@@ -42,47 +42,42 @@
                     <!-- Comment format and layout -->
             <div class="container" style="color:black;">
                 <div class="row">
-                    <a href="/allposts">← Go Back to All Posts</a>
-                        <br>
                     
-                        <!-- Button for a new comment -->
-                        <!-- Needs a href to function -->
-                        <div class="row">
-                            <h2 style="font-size: 40px;">{{post.title}}</h2>
-                            <br>
-                            {{!-- <div id="view-single-post"> --}}
-                                {{!-- <li data-id="{{post.id}}" class="list-group-item"> --}}
-                                <p>Posted by: {{post.User.firstName}} {{post.User.lastName}}</p>
-                                <br>
-                                <p>{{post.content}}</p>
-                                {{!-- </li> --}}
-                            {{!-- </div> --}}
+                    <br>
+                    <div class="card mb-2" style="width: 100%">
+                        <div class="card-header">
+                            <a href="/allposts">← Go Back to All Posts</a>
                         </div>
-                        <div class="pull-right"><a href="#write-comment" id="addacomment" class="btn btn-primary">Add a comment</a> </div></h2>
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title}}</h5>
+                            <p class="card-text">Posted by: {{post.User.firstName}} {{post.User.lastName}}</p>
+                            <p class="card-text">{{post.content}}</p>
+                            <a href="#write-comment" id="addacomment" class="btn btn-primary">Add a comment</a> 
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <ul id="comment-list">
-                        {{#each comment}}
-                        <li class="list-group-item"> 
+                    {{#each comment}}
+                    <div class="card w-100">
+                        <div class="card-body">
                             <p>{{this.content}}</p>
                             <p>From {{this.User.firstName}} {{this.User.lastName}}</p>
-                        </li>
-                        {{/each}}
-                    </ul>
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
                 <hr>
-
 
                 <br>
                 <form id="write-comment">
                     <div class="row">
-                    <div class="form-group col-lg-6 mx-auto pt-2">
+                    <div class="form-group col-lg-9 pt-2">
                         <label for="imageURL-input">Comment</label>
-                        <input type="input" class="form-control" id="comment-input" placeholder="Write your comment here." required>
+                        <input type="input" class="form-control" id="comment-input" style="height: 100px;" placeholder="Write your comment here." required>
                     </div>
                     </div>
                     <div class="row">
-                    <div class="form-group col-lg-3 mx-auto">
+                    <div class="form-group col-lg-3">
                         <label for="category">Select User:</label>
                         <select class="custom-select" id="user">
                             {{#each user}}
@@ -92,7 +87,7 @@
                     </div>
                     </div>
                     <br>
-                    <div class="col-lg-6 mx-auto">
+                    <div class="col-lg-2">
                         <button type="submit" class="btn btn-primary col-12" id="submit" data-id="{{post.id}}">Submit</button>
                     </div>
                     <br>
